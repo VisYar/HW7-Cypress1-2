@@ -8,15 +8,15 @@ describe('Correctness of the main page display', () => {
     cy.visit("/");
   });
 
-  it('Shows correct title', () => {
-    cy.get(selector.title).should('contain', 'Идёмвкино');
+  it("Shows correct title", () => {
+    cy.get(selector.title).should("contain", "Идёмвкино");
   });
 
   it("Shows correct weekdays", () => {
-    cy.get(selector.weekday).should('have.length', 7);
+    cy.get(selector.weekday).should("have.length", 7);
   });
 
   it("Shows correct section of movies", () => {
-    cy.get(selector.movieSection).should('be.visible');
+    cy.get(selector.movieSection).should("be.visible");
   });
 });
