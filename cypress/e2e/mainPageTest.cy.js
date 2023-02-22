@@ -13,7 +13,7 @@ describe('Correctness of the main page display', () => {
   });
 
   it("Shows correct weekdays", () => {
-    cy.get(selector.weekday).should("have.length", 7);
+    cy.get(selector.weekday).should('have.length', 7);
   });
 
   it("Shows correct section of movies", () => {

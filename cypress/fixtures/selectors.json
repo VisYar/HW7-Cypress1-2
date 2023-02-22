@@ -1,5 +1,13 @@
 {
   "title": ".page-header__title",
   "weekday": ".page-nav__day",
-  "movieSection": ".movie"
+  "movieSection": ".movie",
+
+  "email": "[type=email]",
+  "password": "[type=password]",
+  "loginButton": "[type='submit']",
+
+	"pageHeader": ".page-header__subtitle",
+	"loginSection": ".login__title"
+
 }
