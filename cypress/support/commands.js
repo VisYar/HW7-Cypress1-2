@@ -26,8 +26,16 @@
 
 const selector = require("../fixtures/selectors");
 
-Cypress.Commands.add('login', (email, password) => {
+Cypress.Commands.add("login", (email, password) => {
 	cy.get(selector.email).type(email);
   cy.get(selector.password).type(password);
-  cy.get(selector.loginButton).click();
+	cy.get(selector.loginButton).click();
+	cy.wait(500);
+});
+
+Cypress.Commands.add("choosePlace", (row, ...seats) => {
+  for (let i = 0; i < seats.length; i++) {
+    cy.get(`div:nth-child(${row}) > span:nth-child(${seats[i]})`).click();
+    cy.get(`div:nth-child(${row}) > span:nth-child(${seats[i]}).buying-scheme__chair_selected`).should("exist");
+  }
 });
