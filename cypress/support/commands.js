@@ -27,10 +27,10 @@
 const selector = require("../fixtures/selectors");
 
 Cypress.Commands.add("login", (email, password) => {
-	cy.get(selector.email).type(email);
+  cy.get(selector.email).type(email);
   cy.get(selector.password).type(password);
-	cy.get(selector.loginButton).click();
-	cy.wait(500);
+  cy.get(selector.loginButton).click();
+  cy.wait(500);
 });
 
 Cypress.Commands.add("choosePlace", (row, ...seats) => {

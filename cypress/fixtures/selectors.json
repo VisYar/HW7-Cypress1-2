@@ -7,11 +7,11 @@
   "password": "[type=password]",
   "loginButton": "[type='submit']",
 
-	"pageHeader": ".page-header__subtitle",
-	"loginSection": ".login__title",
+  "pageHeader": ".page-header__subtitle",
+  "loginSection": ".login__title",
 
-	"sessionGrid": ".conf-step__seances-movie-title",
-	"dayOfWeek": "a.page-nav__day:nth-of-type(3)",
-	"bookButton": ".acceptin-button",
-	"qrCode": ".ticket__info-qr"
+  "sessionGrid": ".conf-step__seances-movie-title",
+  "dayOfWeek": "a.page-nav__day:nth-of-type(3)",
+  "bookButton": ".acceptin-button",
+  "qrCode": ".ticket__info-qr"
 }
