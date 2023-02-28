@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:login": "cypress run --record --key 4698ca73-d9c5-4dbd-a901-3611f0d320bf --ci-build-id=10 --group login --spec cypress/e2e/loginAdminTest.cy.js",
+    "test:main": "cypress run --record --key 4698ca73-d9c5-4dbd-a901-3611f0d320bf --ci-build-id=10 --group main --spec cypress/e2e/mainPageTest.cy.js",
+    "test:booking": "cypress run --record --key 4698ca73-d9c5-4dbd-a901-3611f0d320bf --ci-build-id=10 --group booking --spec cypress/e2e/bookingMovieTest.cy.js",
+    "test:parallel": "run-p -c test:login test:main test:booking"
   },
   "keywords": [],
   "author": "dmitrieva",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.4.0"
+    "cypress": "^12.4.0",
+    "npm-run-all": "^4.1.5"
   }
 }
